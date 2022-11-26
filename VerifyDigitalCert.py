@@ -49,9 +49,9 @@ def validateCertificate():
                                         chain_cert = resolve(trusted.read())
                                         for cert_val in chain:
                                             if cert_val.is_root and cert_val == cert:
-                                                print("Certificado confiavel")
+                                                print("Certificado confiavel\n" + cert_val)
                             except OpenSSL.crypto.X509StoreContextError as e:
-                                print("Certificado não confiavel")
+                                print("Certificado não confiavel\n" + cert_val)
                                 print(e)
     else:
         print("Arquivo não encontrado")

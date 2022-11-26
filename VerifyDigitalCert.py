@@ -52,7 +52,7 @@ def validateCertificate():
                                                 print("Certificado confiavel\n" + cert_val)
                             except OpenSSL.crypto.X509StoreContextError as e:
                                 print("Certificado não confiavel\n" + cert_val)
-                                print(e)
+
     else:
         print("Arquivo não encontrado")
 
